@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {FixedPointMath} from "./FixedPointMath.sol";
+import { FixedPointMath } from "./FixedPointMath.sol";
 
 library RiskMath {
     using FixedPointMath for uint256;

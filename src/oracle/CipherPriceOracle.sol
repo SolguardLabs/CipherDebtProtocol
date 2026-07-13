@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {IPriceOracle} from "../interfaces/IPriceOracle.sol";
-import {ProtocolAccess} from "../access/ProtocolAccess.sol";
+import { IPriceOracle } from "../interfaces/IPriceOracle.sol";
+import { ProtocolAccess } from "../access/ProtocolAccess.sol";
 
 contract CipherPriceOracle is IPriceOracle, ProtocolAccess {
     struct OracleRecord {
@@ -61,10 +61,10 @@ contract CipherPriceOracle is IPriceOracle, ProtocolAccess {
     function getPrice(address asset) external view returns (PriceData memory data) {
         OracleRecord storage record = _records[asset];
         if (!record.configured || record.priceWad == 0 || record.paused) {
-            return PriceData({priceWad: 0, updatedAt: record.updatedAt, valid: false});
+            return PriceData({ priceWad: 0, updatedAt: record.updatedAt, valid: false });
         }
         bool fresh = block.timestamp <= record.updatedAt + record.maxDelay;
-        return PriceData({priceWad: record.priceWad, updatedAt: record.updatedAt, valid: fresh});
+        return PriceData({ priceWad: record.priceWad, updatedAt: record.updatedAt, valid: fresh });
     }
 
     function priceWad(address asset) external view returns (uint256) {

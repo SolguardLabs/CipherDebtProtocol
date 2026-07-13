@@ -7,8 +7,8 @@
     "scripts": {
         "compile": "hardhat compile",
         "test": "hardhat test",
-        "lint": "npx prettier --check \"{src,test,scripts,.github,.vscode}/**/*.{sol,js,json,yml,md}\"",
-        "format": "npx prettier --write \"{src,test,scripts,.github,.vscode}/**/*.{sol,js,json,yml,md}\"",
+        "lint": "npx prettier --check --ignore-unknown \"hardhat.config.js\" \"package.json\" \".github/**/*.yml\" \".vscode/*.json\" \"scripts/*.sh\" \"test/*.js\" \"src/**/*.sol\" \"README.md\" \"SECURITY.md\"",
+        "format": "npx prettier --write --ignore-unknown \"hardhat.config.js\" \"package.json\" \".github/**/*.yml\" \".vscode/*.json\" \"scripts/*.sh\" \"test/*.js\" \"src/**/*.sol\" \"README.md\" \"SECURITY.md\"",
         "fmt": "prettier --config .prettierrc --ignore-path .prettierignore --write .",
         "loc": "bash scripts/check-loc.sh",
         "ci": "bash scripts/ci.sh"

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {IRateModel} from "../interfaces/IRateModel.sol";
-import {FixedPointMath} from "../libraries/FixedPointMath.sol";
+import { IRateModel } from "../interfaces/IRateModel.sol";
+import { FixedPointMath } from "../libraries/FixedPointMath.sol";
 
 contract CipherRateModel is IRateModel {
     using FixedPointMath for uint256;

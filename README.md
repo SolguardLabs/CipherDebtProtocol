@@ -138,7 +138,7 @@ npm run lint
 
 ## CI
 
-El workflow de GitHub Actions instala dependencias con `npm ci`, compila contratos,
+El workflow de GitHub Actions instala dependencias con `npm install`, compila contratos,
 ejecuta la suite Hardhat, comprueba el rango de LOC en `src/` y valida formato con
 Prettier.
 

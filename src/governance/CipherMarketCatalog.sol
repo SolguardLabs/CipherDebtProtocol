@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {ProtocolAccess} from "../access/ProtocolAccess.sol";
+import { ProtocolAccess } from "../access/ProtocolAccess.sol";
 
 contract CipherMarketCatalog is ProtocolAccess {
     struct MarketDescriptor {

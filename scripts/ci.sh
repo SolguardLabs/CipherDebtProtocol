@@ -23,7 +23,7 @@ run_npx() {
   fi
 }
 
-run_npm ci
+run_npm install
 run_npm run compile
 run_npm test
 bash scripts/check-loc.sh

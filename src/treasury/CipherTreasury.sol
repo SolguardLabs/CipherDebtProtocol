@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {ProtocolAccess} from "../access/ProtocolAccess.sol";
-import {IERC20} from "../interfaces/IERC20.sol";
-import {SafeTransferLib} from "../libraries/SafeTransferLib.sol";
+import { ProtocolAccess } from "../access/ProtocolAccess.sol";
+import { IERC20 } from "../interfaces/IERC20.sol";
+import { SafeTransferLib } from "../libraries/SafeTransferLib.sol";
 
 contract CipherTreasury is ProtocolAccess {
     using SafeTransferLib for IERC20;
