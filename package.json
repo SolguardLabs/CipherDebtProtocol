@@ -14,7 +14,7 @@
         "ci": "bash scripts/ci.sh"
     },
     "devDependencies": {
-        "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+        "@nomicfoundation/hardhat-chai-matchers": "^3.0.0",
         "@nomicfoundation/hardhat-ethers": "^3.0.8",
         "chai": "^4.4.1",
         "ethers": "^6.13.5",
