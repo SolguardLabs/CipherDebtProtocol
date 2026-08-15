@@ -5,13 +5,14 @@
     "private": true,
     "license": "MIT",
     "scripts": {
+        "clean": "hardhat clean",
         "compile": "hardhat compile",
         "test": "hardhat test",
-        "lint": "npx prettier --check --ignore-unknown \"hardhat.config.js\" \"package.json\" \".github/**/*.yml\" \".vscode/*.json\" \"scripts/*.sh\" \"test/*.js\" \"src/**/*.sol\" \"README.md\" \"SECURITY.md\"",
-        "format": "npx prettier --write --ignore-unknown \"hardhat.config.js\" \"package.json\" \".github/**/*.yml\" \".vscode/*.json\" \"scripts/*.sh\" \"test/*.js\" \"src/**/*.sol\" \"README.md\" \"SECURITY.md\"",
-        "fmt": "prettier --config .prettierrc --ignore-path .prettierignore --write .",
-        "loc": "bash scripts/check-loc.sh",
-        "ci": "bash scripts/ci.sh"
+        "test:node": "node --test tests/node/*.test.js",
+        "lint": "prettier --check --ignore-unknown \".github/**/*.yml\" \".vscode/*.json\" \"docs/*.md\" \"scripts/*\" \"sdk/*.js\" \"src/**/*.sol\" \"test/*.js\" \"tests/**/*.js\" \"*.js\" \"*.json\" \"*.md\"",
+        "format": "prettier --write --ignore-unknown \".github/**/*.yml\" \".vscode/*.json\" \"docs/*.md\" \"scripts/*\" \"sdk/*.js\" \"src/**/*.sol\" \"test/*.js\" \"tests/**/*.js\" \"*.js\" \"*.json\" \"*.md\"",
+        "verify": "node scripts/verify-repository.js",
+        "ci": "npm run clean && npm run compile && npm test && npm run test:node && npm run lint && npm run verify"
     },
     "devDependencies": {
         "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
@@ -19,7 +20,7 @@
         "chai": "^4.4.1",
         "ethers": "^6.13.5",
         "hardhat": "^2.26.3",
-        "prettier": "^3.3.3",
+        "prettier": "3.9.6",
         "prettier-plugin-solidity": "^1.4.1"
     }
 }

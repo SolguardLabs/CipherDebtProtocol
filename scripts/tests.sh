@@ -7,3 +7,4 @@ if command -v npm.cmd >/dev/null 2>&1; then
 fi
 
 "${npm_bin}" test
+"${npm_bin}" run test:node
